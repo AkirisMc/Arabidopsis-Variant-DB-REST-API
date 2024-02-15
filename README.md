@@ -20,7 +20,7 @@ The *Datasets* table includes the unique identifiers for the genomes featured in
 
 The *Variants* table contains eight attributes which represent the information present in the columns of a VCF file. 
 
-To streamline the data and retain essential information, the values typically found in the *ID*, *FILTER*, and *FORMAT* columns were omitted, including only the genotype data (e.g. 1|1) from the final column of the VCF files.
+To streamline the data and retain essential information, the values typically found in the *ID*, *FILTER*, and *FORMAT* columns were omitted, including only the genotype data (e.g. *1|1*) from the final column of the VCF files.
 
 An identifying attribute, designated as **id**, was introduced as an incremental integer to uniquely identify each row.
 
@@ -29,6 +29,8 @@ An identifying attribute, designated as **id**, was introduced as an incremental
 | 1      | 7208     | 1            | 6324      | T           | TA        | 40        | 104        | 1|1       |
 | 2      | 7208     | 1            | 214644    | A           | AT        | 40        | 39         | 1|1       |
 | 3      | 7208     | 1            | 851442    | T           | TA        | 40        | 135        | 1|1       |
+
+**Note:** The database ([database.sqlite](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/Database/database.sqlite)) has already been populated with the input data.  In order to create a database with information from different VCF files, an empty SQLite database needs to be created using the [schema.sql](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/Database/schema.sql) file.
 
 ## Importing the data
 
