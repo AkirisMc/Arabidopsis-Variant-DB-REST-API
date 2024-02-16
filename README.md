@@ -33,6 +33,14 @@ An identifying attribute, designated as **id**, was introduced as an incremental
 **Note:** The database ([database.sqlite](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/Database/database.sqlite)) has already been populated with the input data.  In order to create a database with information from different VCF files, an empty SQLite database needs to be created using the [schema.sql](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/Database/schema.sql) file.
 
 ## Importing the data
+The database was populated using the Python script [dataimport_tool.py](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/dataimport_tool.py). The program takes the names of VCF files as command-line arguments, parsing each file and populating the database tables accordingly. It is designed to handle a variable number of VCF files.
+
+To run the program, users just need to enter the name of the VCF files whose content they want to be uploaded to the database.
+
+```python dataimport_tool.py file1.vcf file2_name.vcf file3_name.vcf```  
+
+**Note:** For successful execution of the program, ensure that the script, the VCF files, and the database file are located in the same directory. 
+
 
 ## Server 
 
