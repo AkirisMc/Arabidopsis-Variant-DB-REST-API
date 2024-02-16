@@ -16,7 +16,7 @@ import sqlite3
 
 # creating a variable to hold the input information from the command line
 parser = argparse.ArgumentParser(
-    description = """This script parses three VCF files and populates a SQLite database"""
+    description = """This script parses VCF files and populates a SQLite database"""
 )
 # adding argument to parse a variable number of VCF files
 parser.add_argument(
