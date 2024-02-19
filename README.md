@@ -41,8 +41,12 @@ To run the program, users just need to enter the name of the VCF files whose con
 
 **Note:** For successful execution of the program, ensure that the script, the VCF files, and the database file are located in the same directory. 
 
-
 ## Server 
+A RESTful web service was created using the *Node.js* environment and the *Express.js* framework to enable users to programmatically retrieve and interact with data stored in the variant database.
+
+In the [server.js](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/Server/server.js) script the *Express* dependency is loaded, an object is instantiated using the ```express()``` method, and subsequently, an HTTP server is launched to listen for requests on ```port 3000```. 
+
+A router ([router.js](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/Server/router.js)) was created to organise and modularise the handling of different API endpoints, which was later imported into *server.js* and linked to the API path.
 
 ## Server deployment 
 
