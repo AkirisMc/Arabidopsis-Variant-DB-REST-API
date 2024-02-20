@@ -49,6 +49,19 @@ In the [server.js](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/b
 A router ([router.js](https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API/blob/main/Server/router.js)) was created to organise and modularise the handling of different API endpoints, which was later imported into *server.js* and linked to the API path.
 
 ## Server deployment 
+Users need to deploy the server first in order to interact with the database. To deploy the server, the content of this repository needs to be cloned on your device. 
+```
+git clone https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API.git
+cd Arabidopsis-Variant-DB-REST-API.git
+```
+Next, users need to navigate to the Server directory which contains the "server.js" file along with other associated files and deploy the server by executing the "server.js" file in the terminal.
+```
+cd Server
+node server.js
+```
+Upon successful deployment, users should observe the following message displayed in the terminal:
+
+```Application deployed on port 3000```
 
 ## REST endpoints 
 
