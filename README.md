@@ -54,7 +54,7 @@ Users need to deploy the server first in order to interact with the database. To
 git clone https://github.com/AkirisMc/Arabidopsis-Variant-DB-REST-API.git
 cd Arabidopsis-Variant-DB-REST-API.git
 ```
-Next, users need to navigate to the Server directory which contains the "server.js" file along with other associated files and deploy the server by executing the "server.js" file in the terminal.
+Users then should navigate to the **Server** directory, which includes the *server.js* file along with other associated files. To deploy the server, execute the *server.js* file in the terminal.
 ```
 cd Server
 node server.js
@@ -63,5 +63,5 @@ Upon successful deployment, users should observe the following message displayed
 
 ```Application deployed on port 3000```
 
-## REST endpoints 
+## API endpoints 
 
