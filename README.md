@@ -64,4 +64,13 @@ Upon successful deployment, users should observe the following message displayed
 ```Application deployed on port 3000```
 
 ## API endpoints 
+To access data from the database, users must utilise the REST API endpoints through URL extensions. Various endpoints were created to enable users the access of different types of data from the variant database, which is provided in *JSON* format.
+
+This example shows how to test the server via URL to check whether it is capable of receiving requests and sending responses. Users just need to type the following URL on their browser:
+
+```http://localhost:3000/api/test```
+
+The following message should be displayed on the browser:
+
+```request was successfully received and response was successfully sent```
 
