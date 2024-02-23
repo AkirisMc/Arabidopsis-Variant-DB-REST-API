@@ -97,4 +97,26 @@ These endpoints count the number of structural variants (i.e. SNPs, InDels or bo
 | ```/api/numbervariants/indels/:genome``` | Displays the number of InDels per chromosome given a genome                  |
 | ```/api/numbervariants/both/:genome```   | Displays the number of both types of variants per chromosome given a genome  |
 
-Example output: ```{“chromosome1”:“21513”,“chromosome2”:“45”,“chromosome3”:“98”, “chromosome4”:“24523”, “chromosome5”:“53”}``` 
+Example output: ```{“chromosome1”:“21513”,“chromosome2”:“45”,“chromosome3”:“98”,“chromosome4”:“24523”, “chromosome5”:“53”}``` 
+
+### Endpoints to report all the information on specific variants 
+These endpoints list all the information on specific variants (i.e. SNPs, InDels, or both), given a numerical genome identifier (e.g., *7208*), a chromosome number (e.g., *1*), and the start and end positions on that chromosome (e.g., *6324 - 95475*). 
+
+In simpler terms, these endpoints can show comprehensive details of all the SNPs, InDels, or both variant types, found within a defined region of a specified chromosome in a designated dataset. The information is displayed in a JSON format.
+
+| Endpoint                                 | Description                                                                  |
+| :--------------------------------------: | :--------------------------------------------------------------------------: |
+| ```/api/listvariants/snps/:genome/:chrom/:startpos/:endpos```   | Displays a list of SNPs given a genome, a chromosome, a start position and an end position                    |
+| ```/api/listvariants/indels/:genome/:chrom/:startpos/:endpos``` | Displays a list of InDels given a genome, a chromosome, a start position and an end position                  |
+| ```/api/listvariants/both/:genome/:chrom/:startpos/:endpos```   | Displays a list of both types of variants given a genome, a chromosome, a start position and an end position  |
+
+Example output: 
+```
+[{"id":1,"genome":7208,"chromosome":1,"position":6324,"reference":"T","alternate":"TA","quality":40,"read_depth":104,"genotype":"1|1"},
+{"id":2,"genome":7208,"chromosome":1,"position":214644,"reference":"A","alternate":"AT","quality":40,"read_depth":39,"genotype":"1|1"},
+{"id":3,"genome":7208,"chromosome":1,"position":851442,"reference":"T","alternate":"TA","quality":40,"read_depth":135,"genotype":"1|1"},
+{"id":4,"genome":7208,"chromosome":1,"position":863646,"reference":"G","alternate":"GA","quality":40,"read_depth":29,"genotype":"1|1"},
+{"id":5,"genome":7208,"chromosome":1,"position":869553,"reference":"C","alternate":"CT","quality":40,"read_depth":149,"genotype":"1|1"},
+{"id":6,"genome":7208,"chromosome":1,"position":874471,"reference":"G","alternate":"GA","quality":40,"read_depth":84,"genotype":"1|1"},
+{"id":7,"genome":7208,"chromosome":1,"position":895475,"reference":"G","alternate":"GA","quality":40,"read_depth":116,"genotype":"1|1"}]
+```
