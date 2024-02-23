@@ -79,11 +79,11 @@ Alternatively, the same request can be made using the command line:
 
 ```curl http://localhost:3000/api/test```
 
-## Endpoint to report the datasets
+### Endpoint to report the datasets
 This endpoint fetches all the dataset values (i.e. the name of the VCF files uploaded to the database) and presents them to the user in the form of an array.
 
 | Endpoint                    | Description                                                         |
 | :-------------------------: | :-----------------------------------------------------------------: |
 | ```/api/datasets```         | Displays the name of the VCF files uploaded to the database         |
 
-
+Example output: ```[“genome_7208.vcf”, “genome_8233.vcf”, “genome_9968.vcf”]```
