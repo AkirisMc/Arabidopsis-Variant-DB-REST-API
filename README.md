@@ -87,3 +87,14 @@ This endpoint fetches all the dataset values (i.e. the name of the VCF files upl
 | ```/api/datasets```         | Displays the name of the VCF files uploaded to the database         |
 
 Example output: ```[“genome_7208.vcf”, “genome_8233.vcf”, “genome_9968.vcf”]```
+
+### Endpoints to report the number of variants
+These endpoints count the number of structural variants (i.e. SNPs, InDels or both) per chromosome given the numerical identifier of a genome (e.g. *7208*). The resulting counts are then exhibited for each chromosome in the format of a dictionary.
+
+| Endpoint                                 | Description                                                                  |
+| :--------------------------------------: | :--------------------------------------------------------------------------: |
+| ```/api/numbervariants/snps/:genome```   | Displays the number of SNPs per chromosome given a genome                    |
+| ```/api/numbervariants/indels/:genome``` | Displays the number of InDels per chromosome given a genome                  |
+| ```/api/numbervariants/both/:genome```   | Displays the number of both types of variants per chromosome given a genome  |
+
+Example output: ```{“chromosome1”:“21513”,“chromosome2”:“45”,“chromosome3”:“98”, “chromosome4”:“24523”, “chromosome5”:“53”}``` 
