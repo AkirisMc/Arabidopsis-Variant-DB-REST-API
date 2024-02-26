@@ -89,7 +89,7 @@ This endpoint fetches all the dataset values (i.e. the name of the VCF files upl
 Example output: ```[“genome_7208.vcf”, “genome_8233.vcf”, “genome_9968.vcf”]```
 
 ### Endpoints to report the number of variants
-These endpoints count the number of structural variants (i.e. SNPs, InDels or both) per chromosome given the numerical identifier of a genome (e.g. *7208*). The resulting counts are then exhibited for each chromosome in the format of a dictionary.
+These endpoints count the number of structural variants (i.e. SNPs, InDels, or both) per chromosome given the numerical identifier of a genome (e.g. *7208*). The resulting counts are then exhibited for each chromosome in the format of a dictionary.
 
 | Endpoint                                 | Description                                                                  |
 | :--------------------------------------: | :--------------------------------------------------------------------------: |
@@ -100,7 +100,7 @@ These endpoints count the number of structural variants (i.e. SNPs, InDels or bo
 Example output: ```{“chromosome1”:“21513”,“chromosome2”:“45”,“chromosome3”:“98”,“chromosome4”:“24523”, “chromosome5”:“53”}``` 
 
 ### Endpoints to report all the information on specific variants 
-These endpoints list all the information on specific variants (i.e. SNPs, InDels, or both), given a numerical genome identifier (e.g., *7208*), a chromosome number (e.g., *1*), and the start and end positions on that chromosome (e.g., *6324 - 95475*). 
+These endpoints list all the information on specific variants (i.e. SNPs, InDels, or both), given a numerical genome identifier (e.g. *7208*), a chromosome number (e.g. *1*), and the start and end positions on that chromosome (e.g. *6324 - 95475*). 
 
 In simpler terms, these endpoints can show comprehensive details of all the SNPs, InDels, or both variant types, found within a defined region of a specified chromosome in a designated dataset. The information is displayed in a JSON format.
 
@@ -120,3 +120,14 @@ Example output:
 {"id":6,"genome":7208,"chromosome":1,"position":874471,"reference":"G","alternate":"GA","quality":40,"read_depth":84,"genotype":"1|1"},
 {"id":7,"genome":7208,"chromosome":1,"position":895475,"reference":"G","alternate":"GA","quality":40,"read_depth":116,"genotype":"1|1"}]
 ```
+
+### Endpoints to report the average sample quality
+These endpoints calculate the average quality of the variants (i.e. SNPs, InDels, or both) per chromosome given the numerical identifier of a genome (e.g. *7208*). The results are then rounded and displayed in the form of a dictionary.
+
+| Endpoint                                 | Description                                                                             |
+| :--------------------------------------: | :-------------------------------------------------------------------------------------: |
+| ```/api/avquality/snps/:genome```   | Displays the average sample quality of SNPs per chromosome given a genome                    |
+| ```/api/avquality/indels/:genome``` | Displays the average sample quality of InDels per chromosome given a genome                  |
+| ```/api/avquality/both/:genome```   | Displays the average sample quality of both types of variants per chromosome given a genome  |
+
+Example output: ```{“chromosome1”:“38.32”,“chromosome2”:“37.02”,“chromosome3”:“38.55”,“chromosome4”:“38.34”, “chromosome5”:“37.25”}```
